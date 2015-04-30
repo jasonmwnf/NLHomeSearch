@@ -13,7 +13,12 @@
  *= require_tree .
  *= require_self
  */
-
+h1 {
+  font-size: 600%;
+}
+h3 {
+  font-size: 200%;
+}
 .container {
   margin-top: 35px;
   border: solid;
@@ -24,6 +29,10 @@
   border-bottom: solid;
   border-color: black;
   background-color: #1F3046;
+}
+
+.row.middle {
+  padding-bottom: 15px;
 }
 
 .row.bottom {
@@ -37,5 +46,23 @@
   color: white;
 }
 .top-right {
+  padding-top: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+.bottom-right {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+.image-bottom {
+  width: 100px;
+  height: 50px;
+}
 
+.row.mid-mid {
+  padding-bottom: 15px;
 }

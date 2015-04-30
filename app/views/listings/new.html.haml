@@ -8,6 +8,50 @@
       .top-right
         = image_tag 'image003.jpg'
   .row.middle
-    %h1 Middle
+    .row
+      .col-md-1
+      .col-md-10
+        %h4 <strong>HOW DOES IT WORK?</strong> Simply enter your search criteria and we will provide you with a current list of active homes that meeter your criteria. <strong> Totally Free with No Obligation!</strong>
+    .row
+      .col-md-1
+      .col-md-10
+        %h4 <strong>STEP 1:</strong> Enter Search Criteria
+    .row
+      .col-md-1
+      .col-md-10
+        .form-horizontal
+          = form_for @listing do |f|
+            .row.mid-mid
+              .col-md-6
+                = f.label :area, "Area: "
+                = f.text_field :area, placeholder: "St. John's, Mount Pearl, etc"
+                %br
+                = f.label :style, "Style:"
+                = f.text_field :style, placeholder: "Bungalow, 2 Story, etc"
+                %br
+                = f.label :price_low, "Price:"
+                = f.text_field :price_low, placeholder: "$200,000"
+                = f.label :price_high, "to"
+                = f.text_field :price_high, placeholder: "$300,000"
+              .col-md-6
+                = f.label :type, "Type:"
+                = f.text_field :type, placeholder: "Detached, 2-Apartment, etc"
+                %br
+                = f.label :beds_low, "Bedrooms:"
+                = f.text_field :beds_low, placeholder: "2"
+                = f.label :beds_high, "to"
+                = f.text_field :beds_high, placeholder: "4"
+                %br
+                = f.label :bath_low, "Bathrooms:"
+                = f.text_field :bath_low, placeholder: "2"
+                = f.label :bath_high, "to"
+                = f.text_field :bath_high, placeholder: "4"
+            .row
+              .col-md-4
+              .col-md-4
+                = f.submit "Search Listings", class: 'btn btn-primary btn-lg btn-block'
   .row.bottom
-    %h1 Bottom
+    .col-md-10
+    .col-md-2
+      .bottom-right
+        = image_tag 'royal-lepage-logo.jpg', class: 'image-bottom'

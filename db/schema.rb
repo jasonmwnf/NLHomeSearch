@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150429180824) do
+ActiveRecord::Schema.define(version: 20150430122158) do
 
   create_table "leads", force: true do |t|
     t.string   "first_name"
@@ -36,6 +36,8 @@ ActiveRecord::Schema.define(version: 20150429180824) do
     t.string  "beds_low"
     t.string  "beds_high"
     t.integer "lead_id"
+    t.string  "bath_low"
+    t.string  "bath_high"
   end
 
 end

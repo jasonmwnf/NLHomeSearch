@@ -19,6 +19,9 @@ h1 {
 h3 {
   font-size: 200%;
 }
+h4 {
+  font-size: 150%;
+}
 .container {
   margin-top: 35px;
   border: solid;
@@ -32,7 +35,8 @@ h3 {
 }
 
 .row.middle {
-  padding-bottom: 15px;
+  padding-top: 15px;
+  padding-bottom: 30px;
 }
 
 .row.bottom {
@@ -64,5 +68,11 @@ h3 {
 }
 
 .row.mid-mid {
-  padding-bottom: 15px;
+  padding-bottom: 30px;
+}
+
+.chris {
+  background-image: url('chris.jpg');
+  background-size: cover;
+  height: 1000px;
 }

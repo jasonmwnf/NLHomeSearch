@@ -1,0 +1,63 @@
+.container
+  .row.top
+    .col-md-9
+      .top-left
+        %h1 NLHomesearch.ca
+        %h3 Find your home before it goes on the MLS!
+    .col-md-3
+      .top-right
+        = image_tag 'image003.jpg'
+  .row.middle
+    .row
+      .col-md-1
+      .col-md-10
+        %h4 <strong>HOW DOES IT WORK?</strong> Simply enter your search criteria and we will provide you with a current list of active homes that meeter your criteria. <strong> Totally Free with No Obligation!</strong>
+    .row
+      .col-md-1
+      .col-md-10
+        %h4 <strong>STEP 2:</strong> How Can We Reach You?
+    .row
+      .col-md-1
+      .col-md-10
+        .form-horizontal
+          = form_for @lead do |f|
+            .row.mid-mid
+              .col-md-6
+                = f.label :first_name, "First Name: "
+                = f.text_field :first_name, placeholder: "First Name"
+                %br
+                = f.label :last_name, "Last Name:"
+                = f.text_field :last_name, placeholder: "Last Name"
+                %br
+                = f.label :email, "Email:"
+                = f.text_field :email, placeholder: "E-mail"
+                = f.text_field :email_confirm, placeholder: "Confirm E-mail"
+                %br
+                = f.label :phone, "Phone:"
+                = f.text_field :phone, placeholder: "Phone Number"
+              .col-md-6
+                = f.label :country, "Country:"
+                = f.text_field :country, placeholder: "Country"
+                %br
+                = f.label :province, "Province/State:"
+                = f.text_field :province, placeholder: "Province/State"
+                %p <strong> Are you already pre-qualified for a home loan? </strong>
+                = f.label :pre_qualified, "yes"
+                = f.radio_button :pre_qualified, checked: true
+                = f.label :pre_qualified, "no"
+                = f.radio_button :pre_qualified, checked: false
+                / = f.text_field :beds_high, placeholder: "4"
+                / %br
+                / = f.label :bath_low, "Bathrooms:"
+                / = f.text_field :bath_low, placeholder: "2"
+                / = f.label :bath_high, "to"
+                / = f.text_field :bath_high, placeholder: "4"
+            .row
+              .col-md-4
+              .col-md-4
+                = f.submit "Search Listings", class: 'btn btn-primary btn-lg btn-block'
+  .row.bottom
+    .col-md-10
+    .col-md-2
+      .bottom-right
+        = image_tag 'royal-lepage-logo.jpg', class: 'image-bottom'

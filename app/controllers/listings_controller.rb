@@ -7,7 +7,7 @@ class ListingsController < ApplicationController
     @listing = Listing.new(listing_params)
 
     if @listing.save
-      redirect_to new_user_path(:listing_id => @listing.id)
+      redirect_to new_lead_path(:listing_id => @listing.id)
     else
       render :new
     end

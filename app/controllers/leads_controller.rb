@@ -9,7 +9,7 @@ class LeadsController < ApplicationController
     @lead.listings << listing
 
     if @lead.save
-      redirect_to root_path
+      redirect_to results_path
     else
       render :new
     end
